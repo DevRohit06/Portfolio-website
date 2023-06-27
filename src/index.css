@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  background-color: rgb(20, 20, 20);
+  background: linear-gradient(90deg, #1b1b1b 21px, transparent 1%) center, linear-gradient(#1b1b1b 21px, transparent 1%) center, #585858;
+  background-size: 22px 22px;
+  
+}
