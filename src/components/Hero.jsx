@@ -24,7 +24,7 @@ export default function Hero() {
             <h1 className=" font-light tracking-tight text-gray-300">
               Hi, I&apos;m Rohit
             </h1>
-            <p className="animate-text mt-6 text-4xl leading-25 font-bold text-gray-300 text-transparent bg-clip-text bg-gradient-to-tr from-[#d7d7d7] to-[#616161] sm:text-3xl md:text-6xl">
+            <p className="animate-text mt-6 text-3xl leading-25 font-bold text-gray-300 text-transparent bg-clip-text bg-gradient-to-tr from-[#d7d7d7] to-[#616161] sm:text-3xl md:text-6xl">
               Building digital products, brands, and experience.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
