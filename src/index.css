@@ -7,5 +7,19 @@ body {
   background-color: rgb(20, 20, 20);
   background: linear-gradient(90deg, #1b1b1b 21px, transparent 1%) center, linear-gradient(#1b1b1b 21px, transparent 1%) center, #585858;
   background-size: 22px 22px;
+  background-attachment: fixed;
   
+}
+
+.open{
+  @apply inline-flex p-4 text-yellow-600 border-b-2 border-yellow-600 rounded-t-lg items-center
+}
+.notopen{
+  @apply inline-flex items-center p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 
+}
+.tab {
+  @apply  mt-4 mb-4 h-24 w-24 bg-[#282828] rounded-xl flex flex-col mx-auto justify-center shadow duration-300 hover:bg-white hover:shadow-xl lg:ml-3 mr-3
+}
+.back {
+  z-index: 100;
 }
