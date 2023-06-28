@@ -10,7 +10,7 @@ export default function Project() {
             Projects
           </h1>
           <div className="max-w-screen grid grid-cols-1 gap-8 md:grid md:grid-cols-2 lg:grid lg:grid-cols-2 xl:grid xl:grid-cols-3 ">
-            <a  href="https://rasproduction.vercel.app/" className="relative mx-auto max-w-md overflow-hidden rounded-lg bg-white shadow cursor-none">
+            <a  href="https://rasproduction.vercel.app/" className="relative mx-auto max-w-md overflow-hidden rounded-lg bg-white shadow">
               <div >
                 <img
                   src={ras}
@@ -29,7 +29,7 @@ export default function Project() {
 
               </div>
             </a>
-            <a href="https://jokes-generator-with-api.vercel.app/" className="relative mx-auto max-w-md overflow-hidden rounded-lg bg-white shadow cursor-none">
+            <a href="https://jokes-generator-with-api.vercel.app/" className="relative mx-auto max-w-md overflow-hidden rounded-lg bg-white shadow">
               <div>
                 <img
                   src={joke}
@@ -48,7 +48,7 @@ export default function Project() {
 
               </div>
             </a>
-            <a href="https://lofibeats.tk/" className="relative mx-auto max-w-md overflow-hidden rounded-lg bg-white shadow cursor-none">
+            <a href="https://lofibeats.tk/" className="relative mx-auto max-w-md overflow-hidden rounded-lg bg-white shadow">
               <div>
                 <img
                   src={lofi}
