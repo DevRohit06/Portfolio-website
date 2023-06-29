@@ -59,6 +59,8 @@ This project was built using these technologies.
 - [ ] Contact page and section
 - [ ] Journey section 
 - [ ] Color customization at once
+- [ ] Page for CV Resume
+- [ ] Experience Section 
 
 ## Getting Started
 
