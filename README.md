@@ -53,6 +53,13 @@ This project was built using these technologies.
 
 **📱 Fully Responsive**
 
+## Todo
+- [x] About me section
+- [x] Project section 
+- [ ] Contact page and section
+- [ ] Journey section 
+- [ ] Color customization at once
+
 ## Getting Started
 
 Clone down this repository. You will need `node.js` and `git` installed globally on your machine.
