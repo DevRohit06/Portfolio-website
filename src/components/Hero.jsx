@@ -30,7 +30,7 @@ export default function Hero() {
             <p className="w-5/6 mx-auto animate-text mt-4 text-gray-400 font-medium">I design and code beautifully simple things, and I love what I do.</p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
-                href="#"
+                href="#about"
                 className=" bg-trasparent bg-opacity-10 px-6 py-4 text-lg font-semibold text-gray-400 shadow-sm rounded-sm border border-gray-200 border-opacity-20"
               >
                 About me <ArrowCircleRight/>
