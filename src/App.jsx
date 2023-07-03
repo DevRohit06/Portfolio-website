@@ -5,6 +5,7 @@ import Hero from './components/Hero'
 import Footer from './components/Footer'
 import TechStacks from './components/techStacks'
 import Project from './components/project'
+
 function App() {
 
   return (

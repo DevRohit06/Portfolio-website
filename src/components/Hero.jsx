@@ -25,7 +25,7 @@ export default function Hero() {
               Hi, I&apos;m Rohit 👋
             </h1>
             <p className="animate-text mt-6 text-4xl font-bold text-gray-300 text-transparent bg-clip-text bg-gradient-to-tr from-[#d7d7d7] to-[#616161] sm:text-3xl md:text-5xl">
-            Designer, Frontend Developer
+            Designer, Fullstack Developer
             </p>
             <p className="animate-text mt-4 text-gray-400 font-medium">I design and code beautifully simple things, and I love what I do.</p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
