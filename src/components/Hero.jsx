@@ -27,13 +27,13 @@ export default function Hero() {
             <p className="animate-text mt-6 text-4xl font-bold text-gray-300 text-transparent bg-clip-text bg-gradient-to-tr from-[#d7d7d7] to-[#616161] sm:text-3xl md:text-5xl">
             Designer, Fullstack Developer
             </p>
-            <p className="animate-text mt-4 text-gray-400 font-medium">I design and code beautifully simple things, and I love what I do.</p>
+            <p className="w-5/6 mx-auto animate-text mt-4 text-gray-400 font-medium">I design and code beautifully simple things, and I love what I do.</p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
                 href="#"
-                className=" bg-white bg-opacity-10 px-6 py-4 text-lg font-semibold text-gray-400 shadow-sm rounded-sm border border-gray-200 border-opacity-20"
+                className=" bg-trasparent bg-opacity-10 px-6 py-4 text-lg font-semibold text-gray-400 shadow-sm rounded-sm border border-gray-200 border-opacity-20"
               >
-                Learn more <ArrowCircleRight/>
+                About me <ArrowCircleRight/>
               </a>
              
             </div>

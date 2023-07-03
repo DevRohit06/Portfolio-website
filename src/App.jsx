@@ -5,7 +5,7 @@ import Hero from './components/Hero'
 import Footer from './components/Footer'
 import TechStacks from './components/techStacks'
 import Project from './components/project'
-
+import Contact from './components/contact'
 function App() {
 
   return (
@@ -14,6 +14,7 @@ function App() {
     <Hero />
     <TechStacks/>
     <Project/>
+    <Contact/>
     <Footer/>
     </>
   )

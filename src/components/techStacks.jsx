@@ -2,7 +2,8 @@ import { ArrowCircleRight } from "@mui/icons-material";
 export default function Aboutme() {
   return (
     <>
-      <section className="w-5/6 mx-auto m-6">
+    <br id="about" />
+      <section  className="w-5/6 mx-auto m-6">
         <h1 className="mb-8 font-extrabold text-center text-4xl text-transparent bg-clip-text bg-gradient-to-tr from-[#d7d7d7] to-[#616161]">
           About Me
         </h1>
@@ -34,9 +35,9 @@ export default function Aboutme() {
             <div className="mt-10 flex items-center  gap-x-6">
               <a
                 href="#"
-                className=" bg-white bg-opacity-10 px-6 py-4 text-lg font-semibold text-gray-400 shadow-sm rounded-sm border border-gray-200 border-opacity-20"
+                className=" bg-transparent bg-opacity-10 px-6 py-4 text-lg font-semibold text-gray-400 shadow-sm rounded-sm border border-gray-200 border-opacity-20"
               >
-                Learn more <ArrowCircleRight />
+               Contact Now <ArrowCircleRight />
               </a>
             </div>
           </div>

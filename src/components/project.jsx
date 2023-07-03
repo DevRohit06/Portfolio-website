@@ -9,6 +9,7 @@ export default function Project() {
           <h1 className="mb-8 font-extrabold text-center text-4xl text-transparent bg-clip-text bg-gradient-to-tr from-[#d7d7d7] to-[#616161]">
             Projects
           </h1>
+          <hr className="w-56 mx-auto my-8 opacity-25 border-gray-300" />
           <p className="text-gray-400 font-medium text-lg text-center mb-16">Here are the projects that i recently worked recently and are open sourced</p>
           <div className="max-w-screen grid grid-cols-1 gap-8 md:grid md:grid-cols-2 lg:grid lg:grid-cols-2 xl:grid xl:grid-cols-3 ">
             <a  href='/ras' className="relative mx-auto max-w-md overflow-hidden rounded-lg bg-white shadow">
