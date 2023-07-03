@@ -26,7 +26,7 @@ axios.post('https://formsubmit.co/ajax/technicalrohit06@gmail.com', {
     return(
         <>
         <div><Toaster/></div>
-        <section className="m-6 w-5/6 mx-auto">
+        <section id='contact' className="m-6 w-5/6 mx-auto">
         <h1 className="mb-8 font-extrabold text-center text-4xl text-transparent bg-clip-text bg-gradient-to-tr from-[#d7d7d7] to-[#616161]">
           Contact
         </h1>

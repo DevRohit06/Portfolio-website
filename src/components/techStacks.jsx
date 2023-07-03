@@ -34,7 +34,7 @@ export default function Aboutme() {
             </p>
             <div className="mt-10 flex items-center  gap-x-6">
               <a
-                href="#"
+                href="#contact"
                 className=" bg-transparent bg-opacity-10 px-6 py-4 text-lg font-semibold text-gray-400 shadow-sm rounded-sm border border-gray-200 border-opacity-20"
               >
                Contact Now <ArrowCircleRight />
