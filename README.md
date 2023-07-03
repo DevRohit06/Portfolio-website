@@ -56,11 +56,8 @@ This project was built using these technologies.
 ## Todo
 - [x] About me section
 - [x] Project section 
-- [ ] Contact page and section
-- [ ] Journey section 
-- [ ] Color customization at once
-- [ ] Page for CV Resume
-- [ ] Experience Section 
+- [x] Contact page and section
+
 
 ## Getting Started
 
