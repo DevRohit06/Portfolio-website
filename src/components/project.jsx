@@ -1,6 +1,7 @@
 import ras from "../assets/images/ras.png";
 import joke from "../assets/images/joke.png";
 import lofi from "../assets/images/lofi.png";
+import blog from "../assets/images/blog.png";
 export default function Project() {
   return (
     <>
@@ -12,6 +13,27 @@ export default function Project() {
           <hr className="w-56 mx-auto my-8 opacity-25 border-gray-300" />
           <p className="text-gray-400 font-medium text-lg text-center mb-16">Here are the projects that i recently worked recently and are open sourced</p>
           <div className="max-w-screen grid grid-cols-1 gap-8 md:grid md:grid-cols-2 lg:grid lg:grid-cols-2 xl:grid xl:grid-cols-3 ">
+          <a  href='/blog' className="relative mx-auto max-w-md overflow-hidden rounded-lg bg-white shadow">
+              <div >
+                <img
+                  src={blog}
+                  className=" object-cover"
+                  width={1280}
+                  height={800}
+                  alt=""
+                />
+              </div>
+              <div className="absolute inset-0 z-10 bg-gradient-to-t from-black"></div>
+              <div className="absolute inset-x-0 bottom-0 z-20 p-4">
+                <p className="mb-1 text-sm text-white text-opacity-80">
+                  Website 
+                </p>
+                <h3 className="text-xl font-medium text-white">
+                  DevBlogs
+                </h3>
+
+              </div>
+            </a>
             <a  href='/ras' className="relative mx-auto max-w-md overflow-hidden rounded-lg bg-white shadow">
               <div >
                 <img

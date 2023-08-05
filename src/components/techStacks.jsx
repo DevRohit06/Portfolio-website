@@ -135,7 +135,7 @@ export default function Aboutme() {
                   alt="Flutter"
                   title="Flutter"
                 />
-                <img className="w-12 h-12 mx-10 my-6 fill-current md:mx-12 lg:m-0" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/480px-Tailwind_CSS_Logo.svg.png" alt="Tailwind Css" title="Tailwind css" />
+                <img className="w-12 h-12 mx-10 my-6 fill-current md:mx-12 lg:m-0 object-contain" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/480px-Tailwind_CSS_Logo.svg.png" alt="Tailwind Css" title="Tailwind css" />
 
               </div>
             </div>
