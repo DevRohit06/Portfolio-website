@@ -14,9 +14,10 @@ export default function Content(props){
       <div className="rounded-lg  overflow-hidden">
         <iframe alt="content" className="object-cover object-center w-full" src={props.url} height='550'></iframe>
       </div>
-      <div className="mt-6 flex items-center justify-center">
+      <h1 className="text-2xl text-white  text-center font-bold pt-4">Built using </h1>
+      <div className="mt-6 text-center flex flex-wrap gap-4 items-center justify-center">
         {props.used.map((item, index) => {
-            return <span key={index} className="bg-yellow-100 items-center text-gray-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded ">{item}</span>
+            return <span key={index} className="bg-yellow-100 items-center text-gray-800  font-medium mr-2 px-3 py-2 rounded ">{item}</span>
         })}
         
       </div>
@@ -42,7 +43,7 @@ export default function Content(props){
     )
 }
 Content.propTypes = {
-    used: PropTypes.object,
+    used: PropTypes.any,
     title: PropTypes.any,
     url: PropTypes.any,
     description: PropTypes.any
