@@ -3,13 +3,21 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "astro dev --host",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^3.0.13"
+    "@astrojs/tailwind": "^5.0.0",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.9",
+    "@mui/material": "^5.14.9",
+    "astro": "^3.0.13",
+    "astro-compress": "^2.0.15",
+    "astro-feather-icons": "^1.0.2",
+    "astro-preload": "^1.1.2",
+    "tailwindcss": "^3.3.3"
   }
 }
