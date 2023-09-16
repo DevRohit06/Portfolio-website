@@ -4,19 +4,25 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
-import About from "../components/About.astro"
+import About from "../components/About.astro";
+import Project from '../components/Project.astro';
 // import Education from '../components/Education.astro';
 ---
 
 <Layout title="Rohit Kushwaha">
-	<main>
+	<main class="relative">
 		<Header/>
-		<Hero/>
+		<div>
+			<Hero/>
+		</div>
 		<About/>
+		<Project/>
 		<!-- <Education/> -->
 	</main>
 </Layout>
 
 <style>
-
+* {
+  transition: all 0.25s ease-out;
+}
 </style>
