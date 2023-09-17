@@ -1,8 +1,8 @@
-import ras from "../assets/images/ras.png";
-import joke from "../assets/images/joke.png";
-import lofi from "../assets/images/lofi.png";
-import blog from "../assets/images/blog.png";
-import docAid from "../assets/images/docAid.png";
+import ras from "../assets/images/ras.webp";
+import joke from "../assets/images/joke.webp";
+import lofi from "../assets/images/lofi.webp";
+import blog from "../assets/images/blog.webp";
+import docAid from "../assets/images/docAid.webp";
 const data = [
     {
         name: "DocAid",
