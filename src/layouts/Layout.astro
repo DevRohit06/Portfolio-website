@@ -4,11 +4,13 @@ interface Props {
 }
 
 const { title } = Astro.props;
+import { ViewTransitions } from 'astro:transitions';
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
+    <ViewTransitions/>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
@@ -28,7 +30,7 @@ body {
   background-color: rgb(20, 20, 20);
   background: linear-gradient(90deg, #171717 21px, transparent 1%) center, linear-gradient(#151515 21px, transparent 1%) center, #585858;
   background-size: 22px 22px;
-
+  overflow-x: hidden;
   
   
 }

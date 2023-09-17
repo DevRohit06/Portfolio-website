@@ -6,17 +6,21 @@ import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import About from "../components/About.astro";
 import Project from '../components/Project.astro';
+import Contact from '../components/Contact.astro';
+import { slide } from 'astro:transitions';
+
 // import Education from '../components/Education.astro';
 ---
 
 <Layout title="Rohit Kushwaha">
 	<main class="relative">
-		<Header/>
+		<Header transition:animate="fade" />
 		<div>
 			<Hero/>
 		</div>
 		<About/>
 		<Project/>
+		<Contact/>
 		<!-- <Education/> -->
 	</main>
 </Layout>

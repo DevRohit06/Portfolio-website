@@ -1,10 +1,10 @@
----
+--- 
 import { Image } from "astro:assets";
 import { getData } from "../lib/projects";
 const data = getData();
 ---
 
-<section class="text-gray-300 body-font m-6 w-5/6 mx-auto">
+<section class="text-primary body-font m-6 w-5/6 mx-auto">
   <div class="container px-5 py-24 mx-auto">
     <h1
       class="mb-8 font-extrabold text-center text-4xl text-transparent bg-clip-text bg-gradient-to-tr from-[#d7d7d7] to-[#616161]"
@@ -24,7 +24,7 @@ const data = getData();
       <a class="hover:text-gray-400" href="/projects">view more</a>
     </div>
     <div
-      class="max-w-screen grid grid-cols-1 gap-8 md:grid md:grid-cols-2 lg:grid lg:grid-cols-2 xl:grid xl:grid-cols-3"
+      class="max-w-screen grid grid-cols-1 gap-8 md:grid md:grid-cols-2  lg:grid lg:grid-cols-3 xl:grid xl:grid-cols-3"
     >
       {
         data &&
@@ -32,7 +32,7 @@ const data = getData();
             return (
               <a
                 href={`/projects/${item.slug}`}
-                class="relative mx-auto max-w-md overflow-hidden rounded-xl bg-transparent  border border-1 border-gray-300 border-opacity-25 shadow-xl"
+                class="relative mx-auto max-w-md overflow-hidden rounded-xl bg-transparent  border border-1 border-primary border-opacity-25 shadow-xl"
               >
                 <div class="bg-transparent">
                   <Image
@@ -51,9 +51,31 @@ const data = getData();
                         {item.type}
                       </p>
                     </div>
-                    <button class="p-2 mr-2 bg-gray-400 rounded-full bg-opacity-50">
-                      <svg class="fill-gray-300 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2929 4.29289C12.6834 3.90237 13.3166 3.90237 13.7071 4.29289L20.7071 11.2929C21.0976 11.6834 21.0976 12.3166 20.7071 12.7071L13.7071 19.7071C13.3166 20.0976 12.6834 20.0976 12.2929 19.7071C11.9024 19.3166 11.9024 18.6834 12.2929 18.2929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H17.5858L12.2929 5.70711C11.9024 5.31658 11.9024 4.68342 12.2929 4.29289Z" ></path> </g></svg>
-                      </button>
+                    <button class="p-2 mr-2 bg-primary rounded-full bg-opacity-10">
+                      <svg
+                        class="fill-primary h-6"
+                        viewBox="0 0 24 24"
+                        height="1em"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g
+                          id="SVGRepo_tracerCarrier"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <>
+                          <g id="SVGRepo_bgCarrier" stroke-width="0" />
+                          <g id="SVGRepo_iconCarrier">
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M12.2929 4.29289C12.6834 3.90237 13.3166 3.90237 13.7071 4.29289L20.7071 11.2929C21.0976 11.6834 21.0976 12.3166 20.7071 12.7071L13.7071 19.7071C13.3166 20.0976 12.6834 20.0976 12.2929 19.7071C11.9024 19.3166 11.9024 18.6834 12.2929 18.2929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H17.5858L12.2929 5.70711C11.9024 5.31658 11.9024 4.68342 12.2929 4.29289Z"
+                            />
+                          </g>
+                        </>
+                      </svg>
+                    </button>
                   </div>
                 </div>
               </a>
