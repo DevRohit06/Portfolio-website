@@ -21,27 +21,29 @@ import backgroundImg from "../assets/images/background.webp"
         class="grid sm:grid-cols-2 grid-cols-1 gap-x-8 gap-y-4 w-full justify-center"
       >
         <div>
-          <label class="text-primary font-semibold">Your Name</label>
+          <label for="name" class="text-primary font-semibold">Your Name</label>
           <input
+            aria-labelledby="name"
             class="w-full rounded-md h-10 px-2"
             type="text"
-            name=""
+            name="name"
             id=""
           />
         </div>
         <div>
-          <label class="text-primary font-semibold">Email Adress</label>
+          <label for="email" class="text-primary font-semibold">Email Adress</label>
           <input
+            aria-labelledby="email"
             class="w-full rounded-md h-10 px-2"
             type="email"
-            name=""
+            name="email"
             id=""
           />
         </div>
       </div>
       <div class="py-4">
-        <label class="text-primary font-semibold">Message</label>
-        <textarea class="w-full rounded-md h-28 p-2" name="" id=""></textarea>
+        <label for="message" class="text-primary font-semibold">Message</label>
+        <textarea aria-labelledby="message" class="w-full rounded-md h-28 p-2" name="message" id=""></textarea>
       </div>
       <div class="text-center">
         <input 
