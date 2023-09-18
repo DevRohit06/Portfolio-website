@@ -1,9 +1,10 @@
 ---
+import { Image } from "astro:assets";
 import pfp from "../../public/pfp.webp"
 ---
 <div class="mx-auto  py-4 sm:py-4 lg:py-4">
     <div class="w-40 text-center mx-auto">
-      <img class="rounded-full text-center" src={pfp.src} alt="" width="" height=""/>
+      <Image class="rounded-full text-center" src={pfp} alt="pfp"/>
     </div>
     <div class="text-center">
       <h1 class=" font-light py-4 tracking-tight text-primary">
