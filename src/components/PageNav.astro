@@ -1,15 +1,16 @@
 ---
 interface Props {
   title: string;
+  previousLink: string;
 }
-const { title } = Astro.props;
+const { title, previousLink } = Astro.props;
 ---
 <header class="mt-6">
     <div>
       <div class="flex sm:gap-8 gap-4">
         <a
           class="px-3 flex items-center w-12 py-2 bg-primary bg-opacity-10 text-primary rounded-xl text-xl"
-          href="/"
+          href={previousLink}
         >
           <svg
             class="fill-primary h-6"

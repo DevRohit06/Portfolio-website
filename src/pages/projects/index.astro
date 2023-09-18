@@ -8,7 +8,7 @@ const data = getData();
 
 <Layout title="Projects | Rohit Kushwaha">
   <main class="relative w-5/6 mx-auto" transition:persist>
-    <PageNav title="PROJECTS" />
+    <PageNav title="PROJECTS" previousLink="/#projects" />
     <section>
       <h1 class="text-primary text-3xl font-extrabold mt-24">
         Explore My Projects
@@ -28,6 +28,7 @@ const data = getData();
                     class:list={"rounded-xl w-96"}
                     src={item.image}
                     alt={item.name}
+                    transition:name={item.name}
                   />
                   <div class="flex flex-col gap-3">
                     <div class="">
