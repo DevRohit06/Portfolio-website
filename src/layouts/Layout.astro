@@ -1,4 +1,13 @@
 ---
+import '@fontsource/inter/100.css';
+import '@fontsource/inter/200.css';
+import '@fontsource/inter/300.css';
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/500.css';
+import '@fontsource/inter/600.css';
+import '@fontsource/inter/700.css';
+import '@fontsource/inter/800.css';
+import '@fontsource/inter/900.css';
 interface Props {
 	title: string;
 }
@@ -27,6 +36,7 @@ import { ViewTransitions } from 'astro:transitions';
   scroll-behavior: smooth;
 }
 body {
+  font-family: 'Inter', sans-serif;
   background-color: rgb(20, 20, 20);
   background: linear-gradient(90deg, #171717 21px, transparent 1%) center, linear-gradient(#151515 21px, transparent 1%) center, #585858;
   background-size: 22px 22px;
