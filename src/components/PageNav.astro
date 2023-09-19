@@ -9,8 +9,9 @@ const { title, previousLink } = Astro.props;
     <div>
       <div class="flex sm:gap-8 gap-4">
         <a
+          onclick="history.back()"
           class="px-3 flex items-center w-12 py-2 bg-primary bg-opacity-10 text-primary rounded-xl text-xl"
-          href={previousLink}
+          href='#'
         >
           <svg
             class="fill-primary h-6"
@@ -96,9 +97,15 @@ const { title, previousLink } = Astro.props;
     </div>
   </div>
   <script is:inline>
-    function OpenMenu() {
-      let menu = document.getElementById("menuItem");
-      menu?.classList.toggle("hidden");
+    function Check(){
+      const menu = document.getElementById("menuItem");
+      menu?.classList.add("hidden")
+      console.log("loaded")
     }
-    document.addEventListener("astro:after-swap", OpenMenu);
+    function OpenMenu() {
+      const menu = document.getElementById("menuItem");
+      menu?.classList.toggle('hidden');
+    }
+    Check();
+    document.addEventListener("astro:after-swap", OpenMenu, Check);
   </script>

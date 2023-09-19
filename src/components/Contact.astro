@@ -1,8 +1,10 @@
 ---
-import backgroundImg from "../assets/images/background.webp"
+import { Button } from "@mui/material";
+import backgroundImg from "../assets/images/background.webp";
 ---
 
-<section id="contact"
+<section
+  id="contact"
   class="w-5/6 rounded-xl mx-auto bg-fit"
   style=`background-image: url(${backgroundImg.src});`
 >
@@ -15,44 +17,79 @@ import backgroundImg from "../assets/images/background.webp"
         Get in touch 👋
       </h1>
     </div>
-    <form class="xl:px-24 sm:px-0" action="" onsubmit="return false">
-
+    <form id="form" class="xl:px-24 sm:px-0" action="" onsubmit="return false">
       <div
         class="grid sm:grid-cols-2 grid-cols-1 gap-x-8 gap-y-4 w-full justify-center"
       >
         <div>
-          <label  class="text-primary font-semibold">Your Name
-          <input
-            class="w-full text-black rounded-md h-10 px-2"
-            type="text"
-            name="name"
-            id=""
-          />
-        </label>
+          <label class="text-primary font-semibold"
+            >Your Name
+            <input
+              required
+              class="w-full text-black rounded-md h-10 px-2"
+              type="text"
+              name="name"
+              id="name"
+            />
+          </label>
         </div>
         <div>
-          <label class="text-primary font-semibold">Email Adress
-          <input
-            
-            class="w-full text-black rounded-md h-10 px-2"
-            type="email"
-            name="email"
-            id=""
-          />
-        </label>
+          <label class="text-primary font-semibold"
+            >Email Adress
+            <input
+              required
+              class="w-full text-black rounded-md h-10 px-2"
+              type="email"
+              name="email"
+              id="email"
+            />
+          </label>
         </div>
       </div>
       <div class="py-4">
-        <label  class="text-primary font-semibold">Message
-        <textarea class="w-full text-black rounded-md h-28 p-2" name="message" id=""></textarea></label>
+        <label class="text-primary font-semibold"
+          >Message
+          <textarea
+            class="w-full text-black rounded-md h-28 p-2"
+            name="message"
+            id="message"
+            required></textarea></label
+        >
       </div>
       <div class="text-center">
-        <input 
-          class="px-4 py-2 rounded-md bg-white font-bold"
-          type="submit"
-          value="Send :)"
-        />
+        <button onclick="Post()" class="px-4 py-2 rounded-md bg-white font-bold"
+        >send :)</button>
+
       </div>
     </form>
   </div>
 </section>
+<script is:inline>
+  async function Post() {
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    if (!message || !email || !name) {
+      alert("invalid data");
+    }
+
+    try {
+      await fetch("https://formsubmit.co/ajax/technicalrohit06@gmail.com", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: name,
+          message: message,
+          email: email,
+        }),
+      }).then((response) => {
+        if (response.status === 200) {
+          alert("Message Sent Successfully");
+        }
+      });
+    } catch {
+      alert("Something went wrong");
+    }
+  }
+</script>
