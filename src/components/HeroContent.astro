@@ -10,7 +10,7 @@ import pfp from "../../public/pfp.webp"
       <h1 class=" font-light py-4 tracking-tight text-primary">
         Hi, I&apos;m Rohit 👋
       </h1>
-      <p class="animate-text  text-4xl  font-bold text-primary text-transparent bg-clip-text bg-gradient-to-r from-[#d7d7d7] to-[#616161] sm:text-3xl md:text-5xl pb-2">
+      <p class="animate-text  text-3xl  font-bold text-primary text-transparent bg-clip-text bg-gradient-to-r from-[#d7d7d7] to-[#616161] sm:text-3xl md:text-5xl pb-2">
       Designer, Frontend Developer
       </p>
       <p class="w-5/6 mx-auto animate-text mt-2 text-gray-400 font-medium">I design and code beautifully simple things, and I love what I do.</p>
@@ -22,5 +22,61 @@ import pfp from "../../public/pfp.webp"
         Contact
       </a> -->
       </div>
+      <div class="container_mouse">
+        <a href="#about" aria-label="scrollButton" class="mouse-btn">
+            <span class="mouse-scroll"></span>
+        </a>
+    </div>
     </div>
   </div>
+  <style is:inline>
+    :root {
+  --color: rgba(71, 71, 71, 0.918);
+}
+
+body {
+  background-color: #212121e8;
+}
+
+.container_mouse {
+  z-index: 50;
+  text-align: center;
+  color: var(--color);
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-top: 2rem;
+  cursor: pointer;
+}
+
+.container_mouse .mouse-btn {
+  margin: auto;
+  width: 20px;
+  height: 40px;
+  border: 2px solid var(--color);
+  border-radius: 30px;
+  display: flex;
+}
+
+.container_mouse .mouse-btn .mouse-scroll {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(170deg, rgba(74, 74, 74, 0.918), rgb(123, 124, 124));
+  border-radius: 50%;
+  margin: auto;
+  animation: scrolling 1s linear infinite;
+}
+
+
+@keyframes scrolling {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+}
+  </style>
