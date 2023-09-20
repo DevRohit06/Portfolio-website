@@ -10,6 +10,7 @@ module.exports = {
         text: "text 5s ease infinite",
         roam: "roam 20s infinite ease-in-out alternate",
         roam1: "roam 10s infinite ease-in-out alternate",
+        toast: "toast 4s ease-in-out "
       },
       keyframes: {
         text: {
@@ -21,6 +22,29 @@ module.exports = {
             "background-size": "200% 200%",
             "background-position": "right center",
           },
+        },
+        toast: {
+          "0%": {
+            transform: "translateY(-1000px)",
+            "opacity": "0",
+          },
+          "25%": {
+            transform: "translateY(0px)",
+            "opacity": "1",
+          },
+          "50%": {
+            transform: "translateY(0px)",
+            "opacity": "1",
+          },
+          "75%": {
+            transform: "translateY(0px)",
+            "opacity": "1",
+          },
+          "100%": {
+            transform: "translateY(-1000px)",
+            "opacity": "0",
+          }
+          
         },
         roam: {
           "0%": {
