@@ -1,0 +1,65 @@
+---
+export const prerender = true;
+import { getCollection } from "astro:content";
+import { getFormattedDate } from "../../utils/all";
+import Layout from "../../layouts/Layout.astro";
+import PageNav from "../../components/PageNav";
+import { Image } from "astro:assets";
+
+// Generate a new path for every collection entry
+export async function getStaticPaths() {
+  const blogEntries = await getCollection("blog");
+  return blogEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+// Get the entry directly from the prop on render
+const { entry } = Astro.props;
+const time = getFormattedDate(entry.data.publishDate);
+const { Content, remarkPluginFrontmatter } = await entry.render();
+---
+
+<Layout title={entry.data.title}>
+  <main class="relative sm:w-5/6 w-11/12 mx-auto" transition:persist>
+    <PageNav title={"/blog/" + entry.slug} previousLink="/#projects" client:load />
+    <section class="-z-50 w-5/6 mx-auto pt-12">
+      <img transition:name={entry.data.image.alt} class="rounded-2xl mx-auto sm:w-4/6 w-full" src={entry.data.image.url} alt={entry.data.image.alt} />
+      <div class="py-5">
+        <span
+          class="px-4 py-3 bg-primary bg-opacity-10 text-primary rounded-full"
+          >{entry.data.category}</span
+        >
+      </div>
+      <h1 transition:name={entry.slug} class="sm:text-6xl text-3xl text-primary font-extrabold">{entry.data.title}</h1>
+      <div class="py-4 text-primary font-semibold flex gap-4 flex-wrap">
+        <h1 transition:name={entry.data.author} class="text-primary font-semibold">{entry.data.author}</h1> |
+        <time transition:name={time} >{time}</time>  <h1>|</h1> <h1>{remarkPluginFrontmatter.minutesRead }</h1>
+      </div>
+      <article class="custom mx-auto prose-headings:font-bold prose-lg mt-6 text-primary">
+        <Content/>
+      </article>
+    </section>
+  </main>
+
+</Layout>
+<style is:global>
+  article {
+    scroll-behavior: smooth;
+  }
+  nav.toc-post {
+    @apply bg-primary bg-opacity-10
+    
+  }
+  nav.toc-post {
+    padding: 4px;
+    border-radius: 15px;
+  }
+  .prose-lg :where(ol):not(:where([class~="not-prose"],[class~="not-prose"] *))  {
+    padding-left: 0em;
+  }
+  ol, ul, menu {
+    text-decoration: dotted;
+  }
+</style>

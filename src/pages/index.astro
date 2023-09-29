@@ -6,14 +6,16 @@ import About from "../components/About.astro";
 import Project from "../components/Project.astro";
 import Contact from "../components/Contact.jsx";
 import Footer from "../components/Footer.astro";
-import Toast from "../components/Toast";
-// import Education from '../components/Education.astro';
+
+import IndexNav from "../components/IndexNav";
 ---
 
 <Layout title="Rohit Kushwaha">
   <main class="relative">
+    <IndexNav client:load/>
     <Header transition:animate="fade" />
     <div class="smooth-scroll">
+      
       <Hero />
 
       <About />
@@ -27,9 +29,14 @@ import Toast from "../components/Toast";
 
 <style>
   * {
-    transition: all 2s ease-out;
+    transition: all 2s ease-in-out;
   }
   .smooth-scroll {
 	scroll-behavior: smooth;
   }
+  .custom {
+    height: 100%;
+    width: 100%;
+  }
 </style>
+

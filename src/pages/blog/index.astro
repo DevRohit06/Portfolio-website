@@ -1,0 +1,53 @@
+---
+export const prerender = true;
+import Layout from "../../layouts/Layout.astro";
+import PageNav from "../../components/PageNav";
+import { getCollection } from "astro:content";
+import { getFormattedDate } from "../../utils/all";
+
+const post = await getCollection("blog");
+---
+
+<Layout title="Blog">
+  <section class="relative w-5/6 mx-auto">
+    <PageNav title="/blog" client:load />
+    <h1 class="sm:mt-24 py-8 text-primary text-center text-4xl font-extrabold">The Blog</h1>
+    <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8 mx-auto justify-center">
+      {
+        post.map(async (item) => {
+        const { remarkPluginFrontmatter } = await item.render();
+          let time = getFormattedDate(item.data.publishDate);
+          return (
+            <div class="flex flex-col gap-4">
+              <div class="relative ">
+                <img
+                  transition:name={item.data.image.alt}
+                  class="rounded-xl h-52"
+                  src={item.data.image.url}
+                  alt={item.data.image.alt}
+                />
+                <div class="absolute top-2 ml-2">
+                    <span class="bg-white px-3 py-1.5 rounded-xl text-sm font-semibold">{remarkPluginFrontmatter.minutesRead}</span>
+                </div>
+              </div>
+              <div>
+                <a
+                aria-label={item.slug}
+                  transition:name={item.slug}
+                  href={"/blog/" + item.slug}
+                  class="text-primary font-bold text-2xl "
+                >
+                  {item.data.title}
+                </a>
+                <div class="text-gray-400 font-semibold flex gap-8">
+                  <h1>{item.data.author}</h1>
+                  <h1>{time}</h1>
+                </div>{" "}
+              </div>
+            </div>
+          );
+        })
+      }
+    </div>
+  </section>
+</Layout>

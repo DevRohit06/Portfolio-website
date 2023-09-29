@@ -45,8 +45,9 @@ export default function Contact() {
       <div>
         <Toaster />
       </div>
+      <h1 
+        id="contact" class="mb-8 font-extrabold text-center text-4xl text-transparent bg-clip-text bg-gradient-to-tr from-[#d7d7d7] to-[#616161]">Contact Me</h1>
       <section
-        id="contact"
         className="w-5/6 rounded-xl mx-auto bg-fit"
         style={{ backgroundImage: `url(${backgroundImg.src})` }}
       >

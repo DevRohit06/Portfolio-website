@@ -10,7 +10,7 @@ module.exports = {
         text: "text 5s ease infinite",
         roam: "roam 20s infinite ease-in-out alternate",
         roam1: "roam 10s infinite ease-in-out alternate",
-        toast: "toast 4s ease-in-out "
+        menu: "menu 4s ease-in-out "
       },
       keyframes: {
         text: {
@@ -23,7 +23,7 @@ module.exports = {
             "background-position": "right center",
           },
         },
-        toast: {
+        menu: {
           "0%": {
             transform: "translateY(-1000px)",
             "opacity": "0",
@@ -65,5 +65,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };

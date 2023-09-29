@@ -1,11 +1,11 @@
-import { isOpen, goBack } from "../lib/nav";
+import { isOpen, goBack } from "../utils/nav";
 import { useStore } from "@nanostores/react";
 export default function PageNav(props) {
   const $isOpen = useStore(isOpen);
 
   return (
     <>
-      <header className="mt-6">
+      <header className="mt-6 z-50">
         <div>
           <div className="flex sm:gap-8 gap-4">
             <button
@@ -72,7 +72,7 @@ export default function PageNav(props) {
       $isOpen ? (
         <div
           id="menuItem"
-          className="absolute w-full sm:w-96 right-0 top-16 rounded-xl h-auto bg-black bg-opacity-100"
+          className="absolute z-50 w-full sm:w-96 right-0 top-16 rounded-xl h-auto bg-black bg-opacity-100"
         >
           <div className="flex flex-col justify-center items-center gap-4 px-4 m-4 py-4">
             <a
@@ -95,7 +95,7 @@ export default function PageNav(props) {
             </a>
             <a
               className="w-full py-2 bg-primary text-center rounded-xl bg-opacity-10 hover:bg-opacity-5 text-primary font-bold"
-              href="#"
+              href="/blog"
             >
               Blogs
             </a>
