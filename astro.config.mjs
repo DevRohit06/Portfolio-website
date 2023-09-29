@@ -25,14 +25,14 @@ export default defineConfig({
       theme: "one-dark-pro"
     }
   }), sitemap()],
-  output: "server",
-  adapter: vercel({
-    webAnalytics: {
-      enabled: true
-    },
-    speedInsights: {
-      enabled: true
-    },
-    imageService: true
-  })
+  // output: "server",
+  // adapter: vercel({
+  //   webAnalytics: {
+  //     enabled: true
+  //   },
+  //   speedInsights: {
+  //     enabled: true
+  //   },
+  //   imageService: true
+  // })
 });
