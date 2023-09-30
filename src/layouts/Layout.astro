@@ -1,5 +1,4 @@
 ---
-export const prerender = true;
 import "@fontsource/inter/100.css";
 import "@fontsource/inter/200.css";
 import "@fontsource/inter/300.css";
@@ -9,6 +8,7 @@ import "@fontsource/inter/600.css";
 import "@fontsource/inter/700.css";
 import "@fontsource/inter/800.css";
 import "@fontsource/inter/900.css";
+import "animate.css";
 import { SEO } from "astro-seo";
 const canonicalURL = new URL(Astro.url.pathname, Astro.url.origin).toString();
 const resolvedImageWithDomain = new URL(
@@ -62,6 +62,7 @@ const makeTitle = title
   </head>
   <body>
     <slot />
+    <script src="../utils/aos.js"></script>
   </body><style is:global>
     * {
     }

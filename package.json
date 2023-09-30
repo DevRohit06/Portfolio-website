@@ -23,6 +23,8 @@
     "@tailwindcss/typography": "^0.5.10",
     "@types/react": "^18.2.22",
     "@types/react-dom": "^18.2.7",
+    "animate.css": "^4.1.1",
+    "aos": "^2.3.4",
     "astro": "^3.0.13",
     "astro-compress": "^2.0.15",
     "astro-feather-icons": "^1.0.2",
