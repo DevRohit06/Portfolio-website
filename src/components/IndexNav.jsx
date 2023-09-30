@@ -10,6 +10,7 @@ export default function IndexNav() {
             <div className="">
               <div className="w-full">
                 <button 
+                aria-label="menuButton"
                 onClick={() => {isShow(!show)}}
                 className="bg-primary  font-bold px-4 py-1 rounded-t-xl cursor-pointer">
                   
