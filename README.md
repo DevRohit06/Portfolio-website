@@ -45,6 +45,8 @@ You can check out the live website [here](https://rohitk06.vercel.app).
 
 - [Astro](https://astro.build/)
 
+- [React](https://react.dev/)
+
   
 
 ## Installation
@@ -140,3 +142,6 @@ Icons made by [FontAwesome](https://fontawesome.com/).
   
 
 Feel free to reach out if you have any questions or suggestions!
+
+
+[![Built with Astro](https://astro.badg.es/v2/built-with-astro/large.svg)](https://astro.build)
