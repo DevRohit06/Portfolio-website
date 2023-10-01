@@ -10,7 +10,7 @@ module.exports = {
         text: "text 5s ease infinite",
         roam: "roam 20s infinite ease-in-out alternate",
         roam1: "roam 10s infinite ease-in-out alternate",
-        menu: "menu 4s ease-in-out "
+        menu: "menu .5s ease-in "
       },
       keyframes: {
         text: {
@@ -25,24 +25,12 @@ module.exports = {
         },
         menu: {
           "0%": {
-            transform: "translateY(-1000px)",
-            "opacity": "0",
-          },
-          "25%": {
-            transform: "translateY(0px)",
-            "opacity": "1",
-          },
-          "50%": {
-            transform: "translateY(0px)",
-            "opacity": "1",
-          },
-          "75%": {
-            transform: "translateY(0px)",
+            transform: "translateX(1000px)",
             "opacity": "1",
           },
           "100%": {
-            transform: "translateY(-1000px)",
-            "opacity": "0",
+            transform: "translateX(0px)",
+            "opacity": "1",
           }
           
         },

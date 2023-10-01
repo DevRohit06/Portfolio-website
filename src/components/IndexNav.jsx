@@ -30,7 +30,7 @@ export default function IndexNav() {
       {
         show ?
         <div className="overflow-y-none">
-        <div className={`${animateClass} animate__animated  -z-10 top-[0px] left-[0px]  fixed bg-primary  h-[100%] custom w-[100%]`}>
+        <div className={`-z-10 top-[0px] left-[0px]  fixed bg-primary  h-[100%] custom w-[100%]`}>
           <div className="h-[100%] custom w-[100%] flex items-center justify-center">
             <ul className="flex flex-col text-4xl font-bold text-center space-y-10">
               <a onClick={() => isShow(false)} aria-label="Home" href="/">Home</a>
