@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: http://rohitk06.vercel.app/sitemap-index.xml
