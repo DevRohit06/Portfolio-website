@@ -9,6 +9,8 @@ import mdx from "@astrojs/mdx";
 import remarkToc from "remark-toc";
 import sitemap from "@astrojs/sitemap";
 
+import partytown from "@astrojs/partytown";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://rohitk06.vercel.app",
@@ -25,7 +27,11 @@ export default defineConfig({
     shikiConfig: {
       theme: "one-dark-pro"
     }
-  }), sitemap()],
+  }), sitemap(), partytown({
+    config: {
+      forward: ["dataLayer.push"],
+    },
+  })]
   // output: "server",
   // adapter: vercel({
   //   webAnalytics: {
