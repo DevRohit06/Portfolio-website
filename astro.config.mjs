@@ -34,8 +34,8 @@ export default defineConfig({
     }
   }), robotsTxt({
     sitemap: [
-      'https://rohitk06.site/sitemap-0.xml',
-      'http://rohitk06.site/sitemap-index.xml',
+      'https://www.rohitk06.site/sitemap-0.xml',
+      'http://www.rohitk06.site/sitemap-index.xml',
     ],
   })]
   // output: "server",
