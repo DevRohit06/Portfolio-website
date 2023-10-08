@@ -13,7 +13,7 @@ import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://rohitk06.vercel.app",
+  site: "https://rohitk06.site",
   markdown: {
     ...markdownConfig
   },
