@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageNav from "../components/PageNav";
+---
+
+<Layout title="You lost lmao">
+  <main class="w-5/6 mx-auto relative" transition:persist>
+    <PageNav title="You Lost Lmao" client:load />
+    <section data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+      <div class="text-primary mt-36">
+        <h1 class="text-9xl font-semibold flex justify-center items-center">
+          404
+        </h1>
+        <p class="text-center font-semibold">
+          A page you are trying to access does not exist
+        </p>
+        <div class="flex justify-center mt-6">
+          <button
+            onclick="history.back();"
+            class="px-4 py-2 bg-primary rounded-xl bg-opacity-10 font-semibold"
+            >Go Back</button
+          >
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
