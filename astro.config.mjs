@@ -32,6 +32,11 @@ export default defineConfig({
     config: {
       forward: ["dataLayer.push"]
     }
+  }), robotsTxt({
+    sitemap: [
+      'https://rohitk06.site/sitemap-0.xml',
+      'http://rohitk06.site/sitemap-index.xml',
+    ],
   })]
   // output: "server",
   // adapter: vercel({
