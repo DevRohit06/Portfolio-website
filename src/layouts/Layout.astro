@@ -39,7 +39,7 @@ const makeTitle = title
     <meta name="generator" content={Astro.generator} />
     <SEO
     title={makeTitle}
-    description="A portfolio website built with latest technologies"
+    description="A portfolio website built with latest technologies by Rohit Kushwaha"
     canonical={canonicalURL}
     twitter={{
       creator: "@rohitk_06",
@@ -54,8 +54,11 @@ const makeTitle = title
         image: resolvedImageWithDomain,
       },
       image: {
-        alt: "Homepage Screenshot",
+        alt: "Rohit Kushwaha",
       },
+      optional: {
+        description: `A portfolio website built with latest technologies by Rohit Kushwaha`,
+      }
     }}
   />
   <script
@@ -113,7 +116,7 @@ const makeTitle = title
     }
 
     ::-webkit-scrollbar-track {
-      background-color: rgb(20, 20, 20);
+      background-color: rgba(20, 20, 20);
       -webkit-border-radius: 10px;
       border-radius: 10px;
     }

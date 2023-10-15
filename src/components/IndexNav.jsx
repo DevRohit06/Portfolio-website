@@ -1,7 +1,7 @@
 import { useState } from "react";
 export default function IndexNav() {
   const [show, isShow] = useState(false);
-  const animateClass = show ? "animate__fadeInRightBig" : "animate__fadeOutRightBig";
+
   return (
     <>
       <div id="hamburger" className=" relative z-50">

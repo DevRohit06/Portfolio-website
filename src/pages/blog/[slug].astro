@@ -2,7 +2,7 @@
 export const prerender = true;
 import { getCollection } from "astro:content";
 import { getFormattedDate } from "../../utils/all";
-import Layout from "../../layouts/Layout.astro";
+import BlogLayout from "../../layouts/BlogLayout.astro";
 import PageNav from "../../components/PageNav";
 import { Image } from "astro:assets";
 
@@ -21,9 +21,9 @@ const time = getFormattedDate(entry.data.publishDate);
 const { Content, remarkPluginFrontmatter } = await entry.render();
 ---
 
-<Layout title={entry.data.title}>
+<BlogLayout title={entry.data.title}>
   <main class="relative sm:w-5/6 w-11/12 mx-auto" transition:persist>
-    <PageNav title={"/blog/" + entry.slug} previousLink="/#projects" client:load />
+    <PageNav title={"/blog" } previousLink="/#projects" client:load />
     <section class="-z-50 w-5/6 mx-auto pt-12">
       <img transition:name={entry.data.image.alt} class="rounded-2xl mx-auto sm:w-4/6 w-full" src={entry.data.image.url} alt={entry.data.image.alt} />
       <div class="py-5">
@@ -43,7 +43,7 @@ const { Content, remarkPluginFrontmatter } = await entry.render();
     </section>
   </main>
 
-</Layout>
+</BlogLayout>
 <style is:global>
   article {
     scroll-behavior: smooth;
