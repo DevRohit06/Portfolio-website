@@ -2,6 +2,7 @@
 export const prerender = true;
 import Layout from "../../layouts/Layout.astro";
 import PageNav from "../../components/PageNav";
+import Footer from "../../components/Footer.astro";
 import { getCollection } from "astro:content";
 import { getFormattedDate } from "../../utils/all";
 
@@ -12,7 +13,7 @@ const post = await getCollection("blog");
   <section class="relative w-5/6 mx-auto">
     <PageNav title="/blog" client:load />
     <h1 class="sm:mt-24 py-8 text-primary text-center text-4xl font-extrabold">The Blog</h1>
-    <div class="flex justify-center ">
+    <div class="flex mb-24 justify-center ">
       <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8 mx-auto ">
         {
           post.map(async (item) => {
@@ -51,5 +52,7 @@ const post = await getCollection("blog");
         }
       </div>
     </div>
+   
   </section>
+  <Footer/>
 </Layout>
