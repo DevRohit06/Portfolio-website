@@ -1,5 +1,4 @@
 ---
-export const prerender = true;
 import Layout from "../../layouts/Layout.astro";
 import PageNav from "../../components/PageNav";
 import Footer from "../../components/Footer.astro";
@@ -25,7 +24,7 @@ const prevPagination = page.url.prev ? "cursor-pointer" : "cursor-not-allowed";
 const nextPagination = page.url.next ? "cursor-pointer" : "cursor-not-allowed";
 ---
 
-<Layout title="Blog">
+<Layout title="Blog | Rohit Kushwaha">
   <section class="relative w-5/6 mx-auto">
     <PageNav title="/blog" client:load />
     <h1 class="sm:mt-24 py-8 text-primary text-center text-4xl font-extrabold">
