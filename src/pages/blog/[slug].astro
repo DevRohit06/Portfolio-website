@@ -22,8 +22,8 @@ const { Content, remarkPluginFrontmatter } = await entry.render();
 ---
 
 <BlogLayout title={entry.data.title} snippet={entry.data.snippet} image={entry.data.image.url}>
-  <main class="relative sm:w-5/6 w-11/12 mx-auto" transition:persist>
-    <PageNav title={"/blog" } previousLink="/#projects" client:load />
+  <main class="relative sm:w-5/6 w-11/12 mx-auto">
+    <PageNav transition:persist title={"/blog" } previousLink="/#projects" client:load />
     <section class="-z-50 w-5/6 mx-auto pt-12">
       <img transition:name={entry.data.image.alt} class="rounded-2xl mx-auto sm:w-4/6 w-full" src={entry.data.image.url} alt={entry.data.image.alt} />
       <div class="py-5">

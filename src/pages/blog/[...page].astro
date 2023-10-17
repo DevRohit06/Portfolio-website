@@ -1,0 +1,152 @@
+---
+export const prerender = true;
+import Layout from "../../layouts/Layout.astro";
+import PageNav from "../../components/PageNav";
+import Footer from "../../components/Footer.astro";
+import { getCollection } from "astro:content";
+import { getFormattedDate } from "../../utils/all";
+const post = await getCollection("blog");
+const sortedPost = post.sort(
+  (a, b) =>
+    new Date(b.data.publishDate).valueOf() -
+    new Date(a.data.publishDate).valueOf()
+);
+export async function getStaticPaths({ paginate }) {
+  const post = await getCollection("blog");
+  const sortedPost = post.sort(
+    (a, b) =>
+      new Date(b.data.publishDate).valueOf() -
+      new Date(a.data.publishDate).valueOf()
+  );
+  return paginate(sortedPost, { pageSize: 9 });
+}
+const { page } = Astro.props;
+const prevPagination = page.url.prev ? "cursor-pointer" : "cursor-not-allowed";
+const nextPagination = page.url.next ? "cursor-pointer" : "cursor-not-allowed";
+---
+
+<Layout title="Blog">
+  <section class="relative w-5/6 mx-auto">
+    <PageNav title="/blog" client:load />
+    <h1 class="sm:mt-24 py-8 text-primary text-center text-4xl font-extrabold">
+      The Blog
+    </h1>
+    <div class="flex mb-24 justify-center">
+      <div
+        class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8 mx-auto"
+      >
+        {
+          page.data.map(async (item) => {
+            const { remarkPluginFrontmatter } = await item.render();
+            let time = getFormattedDate(item.data.publishDate);
+            return (
+              <div class="flex flex-col gap-4">
+                <div class="relative ">
+                  <img
+                    transition:name={item.data.image.alt}
+                    class="rounded-xl h-52"
+                    src={item.data.image.url}
+                    alt={item.data.image.alt}
+                  />
+                  <div class="absolute top-2 ml-2">
+                    <span class="bg-white px-3 py-1.5 rounded-xl text-sm font-semibold">
+                      {remarkPluginFrontmatter.minutesRead}
+                    </span>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <a
+                    aria-label={item.slug}
+                    transition:name={item.slug}
+                    href={"/blog/" + item.slug}
+                    class="text-primary font-bold text-2xl "
+                  >
+                    {item.data.title}
+                  </a>
+                  <div class="text-gray-400 font-semibold flex gap-8">
+                    <h1>{item.data.author}</h1>
+                    <h1>{time}</h1>
+                  </div>{" "}
+                </div>
+              </div>
+            );
+          })
+        }
+      </div>
+    </div>
+    <div
+      class="flex items-center justify-center py-10 lg:px-0 sm:px-6 px-4 text-primary"
+    >
+      <div
+        class=" w-full flex items-center justify-between"
+      >
+        <div
+          class="flex  items-center pt-3 text-primary "
+        >
+          <svg
+            width="14"
+            height="8"
+            viewBox="0 0 14 8"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1.1665 4H12.8332"
+              stroke="currentColor"
+              stroke-width="1.25"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path
+              d="M1.1665 4L4.49984 7.33333"
+              stroke="currentColor"
+              stroke-width="1.25"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path
+              d="M1.1665 4.00002L4.49984 0.666687"
+              stroke="currentColor"
+              stroke-width="1.25"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+          <a href={page.url.prev ? page.url.prev : null } class={` ${prevPagination} font-medium leading-none mr-3`}>Previous</a>
+        </div>
+        <div class="sm:flex hidden">
+
+        </div>
+        <div
+          class="flex items-center pt-3 text-primary "
+        >
+          <a href={page.url.next ? page.url.next : null } class={` ${nextPagination} font-medium leading-none mr-3`}>Next</a>
+          <svg
+            width="14"
+            height="8"
+            viewBox="0 0 14 8"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1.1665 4H12.8332"
+              stroke="currentColor"
+              stroke-width="1.25"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path
+              d="M9.5 7.33333L12.8333 4"
+              stroke="currentColor"
+              stroke-width="1.25"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+            <path
+              d="M9.5 0.666687L12.8333 4.00002"
+              stroke="currentColor"
+              stroke-width="1.25"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Layout>
