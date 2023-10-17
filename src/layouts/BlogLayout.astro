@@ -9,17 +9,17 @@ import "@fontsource/inter/700.css";
 import "@fontsource/inter/800.css";
 import "@fontsource/inter/900.css";
 import { SEO } from "astro-seo";
-const canonicalURL = new URL(Astro.url.pathname, Astro.url.origin).toString();
-const resolvedImageWithDomain = new URL(
-  "/image.jpeg",
-  Astro.url.origin
-).toString();
-
 interface Props {
   title: string;
+  image: string;
+  snippet: string;
 }
 
-const { title } = Astro.props;
+const { title, image, snippet  } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.url.origin).toString();
+const resolvedImageWithDomain = image
+
+
 import { ViewTransitions } from "astro:transitions";
 import preload from "astro-preload";
 const makeTitle = title
@@ -39,7 +39,7 @@ const makeTitle = title
     <meta name="generator" content={Astro.generator} />
     <SEO
     title={makeTitle}
-    description="A portfolio website built with latest technologies"
+    description={snippet}
     canonical={canonicalURL}
     twitter={{
       creator: "@rohitk_06",
@@ -50,12 +50,15 @@ const makeTitle = title
       basic: {
         url: canonicalURL,
         type: "website",
-        title: `Rohit Kushwaha`,
+        title: title,
         image: resolvedImageWithDomain,
       },
       image: {
         alt: "Homepage Screenshot",
       },
+      optional: {
+        description: snippet,
+      }
     }}
   />
   <script

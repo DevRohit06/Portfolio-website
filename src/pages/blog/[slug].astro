@@ -21,7 +21,7 @@ const time = getFormattedDate(entry.data.publishDate);
 const { Content, remarkPluginFrontmatter } = await entry.render();
 ---
 
-<BlogLayout title={entry.data.title}>
+<BlogLayout title={entry.data.title} snippet={entry.data.snippet} image={entry.data.image.url}>
   <main class="relative sm:w-5/6 w-11/12 mx-auto" transition:persist>
     <PageNav title={"/blog" } previousLink="/#projects" client:load />
     <section class="-z-50 w-5/6 mx-auto pt-12">
