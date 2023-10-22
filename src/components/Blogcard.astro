@@ -1,0 +1,63 @@
+---
+import { getCollection } from "astro:content";
+import { getFormattedDate } from "../utils/all";
+const post = await getCollection("blog");
+const sortedPost = post.sort(
+  (a, b) =>
+    new Date(b.data.publishDate).valueOf() -
+    new Date(a.data.publishDate).valueOf()
+);
+---
+
+<section class="w-5/6 mx-auto">
+    <div  data-aos="fade-up"
+    data-aos-anchor-placement="top-bottom">
+        <div class="flex items-center justify-between py-8">
+            <h1 class="text-primary text-3xl font-semibold">Latest Blog Posts</h1>
+            <a class="text-primary px-4 py-2.5 bg-primary rounded-xl bg-opacity-10" aria-label="blog link" href="/blog"> View all</a>
+        </div>
+        <div class="flex mb-24 justify-center">
+            <div
+              class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8 mx-auto"
+            >
+              {
+                sortedPost.slice(0,3).map(async (item) => {
+                  const { remarkPluginFrontmatter } = await item.render();
+                  let time = getFormattedDate(item.data.publishDate);
+                  return (
+                    <div class="flex flex-col gap-4">
+                      <div class="relative ">
+                        <img
+                          transition:name={item.data.image.alt}
+                          class="rounded-xl h-52"
+                          src={item.data.image.url}
+                          alt={item.data.image.alt}
+                        />
+                        <div class="absolute top-2 ml-2">
+                          <span class="bg-white px-3 py-1.5 rounded-xl text-sm font-semibold">
+                            {remarkPluginFrontmatter.minutesRead}
+                          </span>
+                        </div>
+                      </div>
+                      <div class="flex flex-col gap-2">
+                        <a
+                          aria-label={item.slug}
+                          transition:name={item.slug}
+                          href={"/blog/" + item.slug}
+                          class="text-primary font-bold text-2xl "
+                        >
+                          {item.data.title}
+                        </a>
+                        <div class="text-gray-400 font-semibold flex gap-8">
+                          <h1>{item.data.author}</h1>
+                          <h1>{time}</h1>
+                        </div>{" "}
+                      </div>
+                    </div>
+                  );
+                })
+              }
+            </div>
+          </div>
+    </div>
+</section>
