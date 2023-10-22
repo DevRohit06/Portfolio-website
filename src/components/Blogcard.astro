@@ -13,12 +13,12 @@ const sortedPost = post.sort(
     <div  data-aos="fade-up"
     data-aos-anchor-placement="top-bottom">
         <div class="flex items-center justify-between py-8">
-            <h1 class="text-primary text-3xl font-semibold">Latest Blog Posts</h1>
+            <h1 class="text-primary text-2xl sm:text-3xl font-semibold">Latest Blog Posts</h1>
             <a class="text-primary px-4 py-2.5 bg-primary rounded-xl bg-opacity-10" aria-label="blog link" href="/blog"> View all</a>
         </div>
-        <div class="flex mb-24 justify-center">
+        <div class="flex mb-24 mx-auto justify-center">
             <div
-              class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8 mx-auto"
+              class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8 mx-auto justify-center"
             >
               {
                 sortedPost.slice(0,3).map(async (item) => {
@@ -29,7 +29,7 @@ const sortedPost = post.sort(
                       <div class="relative ">
                         <img
                           transition:name={item.data.image.alt}
-                          class="rounded-xl h-52"
+                          class="rounded-xl object-cover "
                           src={item.data.image.url}
                           alt={item.data.image.alt}
                         />

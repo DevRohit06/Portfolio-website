@@ -32,7 +32,7 @@ const nextPagination = page.url.next ? "cursor-pointer" : "cursor-not-allowed";
     </h1>
     <div class="flex mb-24 justify-center">
       <div
-        class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8 mx-auto"
+        class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8 mx-auto justify-center items-center"
       >
         {
           page.data.map(async (item) => {
@@ -43,7 +43,7 @@ const nextPagination = page.url.next ? "cursor-pointer" : "cursor-not-allowed";
                 <div class="relative ">
                   <img
                     transition:name={item.data.image.alt}
-                    class="rounded-xl h-52"
+                    class="rounded-xl "
                     src={item.data.image.url}
                     alt={item.data.image.alt}
                   />
