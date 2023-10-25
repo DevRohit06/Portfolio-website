@@ -32,13 +32,13 @@ To run this project, you'll need the following software installed on your system
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/your-portfolio-website.git
+   git clone https://github.com/DevRohit06/Portfolio-website.git
    ```
 
 2. Change into the project directory:
 
    ```bash
-   cd your-portfolio-website
+   cd Portfolio-website
    ```
 
 3. Install project dependencies:
