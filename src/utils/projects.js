@@ -3,7 +3,30 @@ import joke from "../assets/images/joke.webp";
 import lofi from "../assets/images/lofi.webp";
 import blog from "../assets/images/blog.webp";
 import docAid from "../assets/images/docAid.webp";
+import LifeInsureEase from "../assets/images/Lifeinsureease.webp";
+import Portfolio from "../assets/images/portfolio.webp"
 const data = [
+    {
+        name: "LifeInsureEase",
+        type: "Website",
+        url: "https://lifeinsureease.in/",
+        github: "https://github.com/DevRohit06/insurance-website",
+        image: LifeInsureEase,
+        slug: "lifeinsureease",
+        description: "This is an Insurance website made using Astro, Reactjs and Tailwind css. ",
+        tech: ['HTML', 'Javascript', 'Css', 'Tailwind css', 'Astro', 'Reactjs']
+
+    },
+    {
+        name: "Portfolio Website",
+        type: "Website",
+        url: "https://rohitk06.site/",
+        github: "https://github.com/DevRohit06/Portfolio-website",
+        image: Portfolio,
+        slug: "portfolio",
+        description: "This is my Portfolio website made using Astro, Reactjs and Tailwind css. ",
+        tech: ['HTML', 'Javascript', 'Css', 'Tailwind css', 'Astro', 'Reactjs']
+    },
     {
         name: "DocAid",
         type: "Website",

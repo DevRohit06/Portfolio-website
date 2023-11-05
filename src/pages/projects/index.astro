@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
 import PageNav from "../../components/PageNav.jsx";
 import { getData } from "../../utils/projects";
+import Footer from "../../components/Footer.astro";
 const data = getData();
 ---
 
@@ -98,6 +99,7 @@ const data = getData();
         }
       </div>
     </section>
+   
   </main>
+  <Footer />
 </Layout>
-../../utils/projects.js
