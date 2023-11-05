@@ -3,7 +3,7 @@ import joke from "../assets/images/joke.webp";
 import lofi from "../assets/images/lofi.webp";
 import blog from "../assets/images/blog.webp";
 import docAid from "../assets/images/docAid.webp";
-import LifeInsureEase from "../assets/images/Lifeinsureease.webp";
+import LifeInsureEase from "../assets/images/lifeinsureease.webp";
 import Portfolio from "../assets/images/portfolio.webp"
 const data = [
     {
