@@ -10,7 +10,6 @@ module.exports = {
         text: "text 5s ease infinite",
         roam: "roam 20s infinite ease-in-out alternate",
         roam1: "roam 10s infinite ease-in-out alternate",
-        menu: "menu .5s ease-in "
       },
       keyframes: {
         text: {
@@ -22,17 +21,6 @@ module.exports = {
             "background-size": "200% 200%",
             "background-position": "right center",
           },
-        },
-        menu: {
-          "0%": {
-            transform: "translateX(1000px)",
-            "opacity": "1",
-          },
-          "100%": {
-            transform: "translateX(0px)",
-            "opacity": "1",
-          }
-          
         },
         roam: {
           "0%": {
