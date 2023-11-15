@@ -1,20 +1,22 @@
---- 
+---
 import { Image } from "astro:assets";
 import { getData } from "../utils/projects";
 const data = getData();
 ---
 
-<section data-aos="fade-up"
-data-aos-anchor-placement="top-bottom"
-data-aos-delay="500"  id="projects" class="text-primary body-font m-6 w-5/6 mx-auto">
+<section id="projects" class="text-primary body-font m-6 w-5/6 mx-auto">
   <div class="container px-5 py-24 mx-auto">
     <h1
+      data-aos="fade-up"
+      data-aos-anchor-placement="center-bottom"
       class="mb-8 font-extrabold text-center text-4xl text-transparent bg-clip-text bg-gradient-to-tr from-[#d7d7d7] to-[#616161]"
     >
       Recent Projects
     </h1>
 
     <p
+      data-aos="fade-up"
+      data-aos-anchor-placement="center-bottom"
       class="text-gray-400 font-medium text-lg text-center mb-16 w-full sm:w-5/6 mx-auto"
     >
       Browse through my projects and see the diverse range of websites I've
@@ -26,13 +28,15 @@ data-aos-delay="500"  id="projects" class="text-primary body-font m-6 w-5/6 mx-a
       <a class="hover:text-gray-400" href="/projects">view more</a>
     </div>
     <div
-      class="max-w-screen grid grid-cols-1 gap-8 md:grid md:grid-cols-2  lg:grid lg:grid-cols-3 xl:grid xl:grid-cols-3"
+      class="max-w-screen grid grid-cols-1 gap-8 md:grid md:grid-cols-2 lg:grid lg:grid-cols-3 xl:grid xl:grid-cols-3"
     >
       {
         data &&
           data.slice(0, 3).map((item, index) => {
             return (
               <a
+                data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom"
                 href={`${item.url}`}
                 class="relative mx-auto max-w-md overflow-hidden rounded-xl bg-transparent  border border-1 border-primary border-opacity-25 shadow-xl"
               >
@@ -47,14 +51,15 @@ data-aos-delay="500"  id="projects" class="text-primary body-font m-6 w-5/6 mx-a
                 <div class=" z-20 py-4 px-2 rounded-b-xl bg-opacity-75">
                   <div class="flex items-center justify-between">
                     <div>
-                      <h1 class="text-xl  font-bold text-white">
-                        {item.name}
-                      </h1>
+                      <h1 class="text-xl  font-bold text-white">{item.name}</h1>
                       <p class="mb-1 text-sm text-white text-opacity-80">
                         {item.type}
                       </p>
                     </div>
-                    <button aria-label={item.name} class="p-2 mr-2 bg-primary rounded-full bg-opacity-10">
+                    <button
+                      aria-label={item.name}
+                      class="p-2 mr-2 bg-primary rounded-full bg-opacity-10"
+                    >
                       <svg
                         class="fill-primary h-6"
                         viewBox="0 0 24 24"
