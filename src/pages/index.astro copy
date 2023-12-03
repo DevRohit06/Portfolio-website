@@ -1,0 +1,46 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
+import Project from "../components/Project.astro";
+import Contact from "../components/Contact.jsx";
+import Footer from "../components/Footer.astro";
+import Blogcard from "../components/Blogcard.astro";
+import IndexNav from "../components/IndexNav";
+---
+
+<Layout title="Rohit Kushwaha">
+  <main class="relative">
+    <IndexNav client:load/>
+    <Header transition:animate="fade" />
+    <div class="smooth-scroll">
+      
+      <Hero />
+
+      <About />
+    </div>
+    <Project />
+    <Blogcard/>
+    <Contact client:load />
+    <Footer />
+    <!-- <Education/> -->
+  </main>
+</Layout>
+
+<style>
+  * {
+    transition: all 2s ease-in-out;
+  }
+  .smooth-scroll {
+	scroll-behavior: smooth;
+  }
+  .custom {
+    height: 100%;
+    width: 100%;
+  }
+  .animate__animated.animate__fadeInRightBig {
+  --animate-duration: 0s;
+}
+</style>
+
