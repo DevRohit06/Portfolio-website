@@ -5,7 +5,19 @@ import blog from "../assets/images/blog.webp";
 import docAid from "../assets/images/docAid.webp";
 import LifeInsureEase from "../assets/images/lifeinsureease.webp";
 import Portfolio from "../assets/images/portfolio.webp"
+import CartManagementSystem from "../assets/images/cart-management-system.webp"
 const data = [
+    {
+        name: "Cart Management System",
+        type: "WebApp",
+        url: "https://cart-system-sveltekit.vercel.app/",
+        github: "https://github.com/DevRohit06/cart-system-sveltekit",
+        image: CartManagementSystem,
+        slug: "cart-management-system",
+        description: "This is a Cart Management System made using SvelteKit and Tailwind css with the help of FakeStoreAPI. it has two versions one with sveltekit and another with NextJS.",
+        tech: ['HTML', 'Javascript', 'Css', 'Tailwind css', 'SvelteKit', 'NextJS']
+        
+    },
     {
         name: "LifeInsureEase",
         type: "Website",
