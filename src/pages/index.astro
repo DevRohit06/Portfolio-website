@@ -4,6 +4,7 @@ import Header from "../components/Header.astro";
 import Hero from "../components/Hero.astro";
 import About from "../components/About.astro";
 import Project from "../components/Project.astro";
+import Timeline from "../components/Timeline.astro";
 import Contact from "../components/Contact.jsx";
 import Footer from "../components/Footer.astro";
 import Blogcard from "../components/Blogcard.astro";
@@ -16,9 +17,9 @@ import IndexNav from "../components/IndexNav";
     <Header transition:animate="fade" />
     <div class="smooth-scroll">
       <Hero />
-
       <About />
     </div>
+    <Timeline/>
     <Project />
     <Blogcard />
     <Contact client:load />
