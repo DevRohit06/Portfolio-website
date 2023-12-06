@@ -9,16 +9,16 @@ export default function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [isToast, setisToast] = useState(false);
-  function Check(){
-    if(!message || !email || !name){
+  function Check() {
+    if (!message || !email || !name) {
       toast.error("Invalid inputs", {
-        style:{backgroundColor:"#303030",color:'#fff'}
-      })
+        style: { backgroundColor: "#303030", color: "#fff" },
+      });
     }
   }
   function handleForm(e) {
     e.preventDefault();
-  
+
     toast.success("Message Sent Successfully", {
       style: { backgroundColor: "#303030", color: "#fff" },
     });
@@ -36,17 +36,23 @@ export default function Contact() {
           });
         }
       })
-      .catch((error) => toast.error("Unable to send messages", {
-        style:{backgroundColor:"#303030",color:'#fff'}
-      }));
+      .catch((error) =>
+        toast.error("Unable to send messages", {
+          style: { backgroundColor: "#303030", color: "#fff" },
+        })
+      );
   }
   return (
     <>
       <div>
         <Toaster />
       </div>
-      <h1 
-        id="contact" className="mb-8 font-extrabold text-center text-4xl text-transparent bg-clip-text bg-gradient-to-tr from-[#d7d7d7] to-[#616161]">Contact Me</h1>
+      <h1
+        id="contact"
+        className="mb-8 font-extrabold text-center text-4xl text-transparent bg-clip-text bg-gradient-to-tr from-[#d7d7d7] to-[#616161]"
+      >
+        Contact Me
+      </h1>
       <section
         className="w-5/6 rounded-xl mx-auto bg-fit"
         style={{ backgroundImage: `url(${backgroundImg.src})` }}
@@ -108,7 +114,7 @@ export default function Contact() {
             </div>
             <div className="text-center">
               <input
-              onClick={Check}
+                onClick={Check}
                 type="submit"
                 value="submit :)"
                 className="px-4 py-2 rounded-md bg-white font-bold"

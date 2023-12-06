@@ -12,16 +12,15 @@ import IndexNav from "../components/IndexNav";
 
 <Layout title="Rohit Kushwaha">
   <main class="relative">
-    <IndexNav client:load/>
+    <IndexNav client:load />
     <Header transition:animate="fade" />
     <div class="smooth-scroll">
-      
       <Hero />
 
       <About />
     </div>
     <Project />
-    <Blogcard/>
+    <Blogcard />
     <Contact client:load />
     <Footer />
     <!-- <Education/> -->
@@ -33,14 +32,13 @@ import IndexNav from "../components/IndexNav";
     transition: all 2s ease-in-out;
   }
   .smooth-scroll {
-	scroll-behavior: smooth;
+    scroll-behavior: smooth;
   }
   .custom {
     height: 100%;
     width: 100%;
   }
   .animate__animated.animate__fadeInRightBig {
-  --animate-duration: 0s;
-}
+    --animate-duration: 0s;
+  }
 </style>
-

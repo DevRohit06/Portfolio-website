@@ -21,56 +21,87 @@ const time = getFormattedDate(entry.data.publishDate);
 const { Content, remarkPluginFrontmatter } = await entry.render();
 ---
 
-<BlogLayout title={entry.data.title} snippet={entry.data.snippet} image={entry.data.image.url}>
+<BlogLayout
+  title={entry.data.title}
+  snippet={entry.data.snippet}
+  image={entry.data.image.url}
+>
   <main class="relative sm:w-5/6 w-11/12 mx-auto">
-    <PageNav transition:persist title={"/blog" } previousLink="/#projects" client:load />
-    <section class="-z-50 w-5/6 mx-auto pt-12">
-      <img transition:name={entry.data.image.alt} class="rounded-2xl mx-auto sm:w-4/6 w-full" src={entry.data.image.url} alt={entry.data.image.alt} />
+    <PageNav
+      transition:persist
+      title={"/blog"}
+      previousLink="/#projects"
+      client:load
+    />
+    <section class="-z-50 sm:w-5/6 w-11/12 mx-auto pt-12">
+      <img
+        transition:name={entry.data.image.alt}
+        class="rounded-2xl mx-auto sm:w-4/6 w-full"
+        src={entry.data.image.url}
+        alt={entry.data.image.alt}
+      />
       <div class="py-5">
         <span
           class="px-4 py-3 bg-primary bg-opacity-10 text-primary rounded-full"
           >{entry.data.category}</span
         >
       </div>
-      <h1 transition:name={entry.slug} class="sm:text-6xl text-3xl text-primary font-extrabold">{entry.data.title}</h1>
+      <h1
+        transition:name={entry.slug}
+        class="sm:text-6xl text-3xl text-primary font-extrabold"
+      >
+        {entry.data.title}
+      </h1>
       <div class="py-4 text-primary font-semibold flex gap-x-4 flex-wrap">
-        <h1 transition:name={entry.data.author} class="text-primary font-semibold">{entry.data.author}</h1> |
-        <time transition:name={time} >{time}</time>  <h1>|</h1> <h1>{remarkPluginFrontmatter.minutesRead }</h1>
+        <h1
+          transition:name={entry.data.author}
+          class="text-primary font-semibold"
+        >
+          {entry.data.author}
+        </h1> |
+        <time transition:name={time}>{time}</time>
+        <h1>|</h1>
+        <h1>{remarkPluginFrontmatter.minutesRead}</h1>
       </div>
-      <article class="custom mx-auto prose-headings:font-bold prose-lg mb-24 mt-6 text-primary">
-        <Content/>
-        
-        <div class="flex  gap-4 flex-wrap">
+      <article
+        class="custom mx-auto prose-headings:font-bold prose-lg mb-24 mt-6 text-primary"
+      >
+        <Content />
+
+        <div class="flex gap-4 flex-wrap">
           <h6>Tags :</h6>
           {
             entry.data.tags.map((tag) => {
               return (
-                <span class="px-3 py-1.5 text-base bg-primary bg-opacity-10 rounded-xl">#{tag}</span>
-              )
+                <span class="px-3 py-1.5 text-base bg-primary bg-opacity-10 rounded-xl">
+                  #{tag}
+                </span>
+              );
             })
           }
         </div>
       </article>
     </section>
   </main>
-
 </BlogLayout>
 <style is:global>
   * {
     scroll-behavior: smooth;
   }
   nav.toc-post {
-    @apply bg-primary bg-opacity-10
-    
+    @apply bg-primary bg-opacity-10;
   }
   nav.toc-post {
     padding: 4px;
     border-radius: 15px;
   }
-  .prose-lg :where(ol):not(:where([class~="not-prose"],[class~="not-prose"] *))  {
+  .prose-lg
+    :where(ol):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
     padding-left: 0em;
   }
-  ol, ul, menu {
+  ol,
+  ul,
+  menu {
     text-decoration: dotted;
   }
 </style>

@@ -68,8 +68,7 @@ export default function PageNav(props) {
           </div>
         </div>
       </header>
-      {
-      $isOpen ? (
+      {$isOpen ? (
         <div
           id="menuItem"
           className="absolute z-50 w-full sm:w-96 right-0 top-16 rounded-xl h-auto bg-black bg-opacity-100"

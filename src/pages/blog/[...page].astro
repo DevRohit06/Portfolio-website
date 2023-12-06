@@ -19,7 +19,7 @@ export async function getStaticPaths({ paginate }) {
   );
   return paginate(sortedPost, { pageSize: 9 });
 }
-const { page } = Astro.props;
+const { page }: any = Astro.props;
 const prevPagination = page.url.prev ? "cursor-pointer" : "cursor-not-allowed";
 const nextPagination = page.url.next ? "cursor-pointer" : "cursor-not-allowed";
 ---
@@ -76,12 +76,8 @@ const nextPagination = page.url.next ? "cursor-pointer" : "cursor-not-allowed";
     <div
       class="flex items-center justify-center py-10 lg:px-0 sm:px-6 px-4 text-primary"
     >
-      <div
-        class=" w-full flex items-center justify-between"
-      >
-        <div
-          class="flex  items-center pt-3 text-primary "
-        >
+      <div class="w-full flex items-center justify-between">
+        <div class="flex items-center pt-3 text-primary">
           <svg
             width="14"
             height="8"
@@ -108,15 +104,18 @@ const nextPagination = page.url.next ? "cursor-pointer" : "cursor-not-allowed";
               stroke-linecap="round"
               stroke-linejoin="round"></path>
           </svg>
-          <a href={page.url.prev ? page.url.prev : null } class={` ${prevPagination} font-medium leading-none mr-3`}>Previous</a>
+          <a
+            href={page.url.prev ? page.url.prev : null}
+            class={` ${prevPagination} font-medium leading-none mr-3`}
+            >Previous</a
+          >
         </div>
-        <div class="sm:flex hidden">
-
-        </div>
-        <div
-          class="flex items-center pt-3 text-primary "
-        >
-          <a href={page.url.next ? page.url.next : null } class={` ${nextPagination} font-medium leading-none mr-3`}>Next</a>
+        <div class="sm:flex hidden"></div>
+        <div class="flex items-center pt-3 text-primary">
+          <a
+            href={page.url.next ? page.url.next : null}
+            class={` ${nextPagination} font-medium leading-none mr-3`}>Next</a
+          >
           <svg
             width="14"
             height="8"
