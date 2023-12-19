@@ -5,7 +5,7 @@ export default function IndexNav() {
   return (
     <>
       <div id="hamburger" className=" relative z-50">
-        <div className="">
+        <div className="absolute">
           <div className="fixed right-[-10px] top-[50%] rotate-[270deg]">
             <div className="">
               <div className="w-full">
