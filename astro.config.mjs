@@ -19,7 +19,8 @@ export default defineConfig({
   markdown: {
     ...markdownConfig
   },
-  integrations: [tailwind({
+  integrations: [
+    tailwind({
     config: {
       applyBaseStyles: false
     }
