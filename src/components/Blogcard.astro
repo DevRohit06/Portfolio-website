@@ -25,7 +25,7 @@ const sortedPost = post.sort(
     </div>
     <div class="flex mb-24 mx-auto justify-center">
       <div
-        class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8 mx-auto justify-center"
+        class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8 mx-auto justify-center items-center"
       >
         {
           sortedPost.slice(0, 3).map(async (item) => {
@@ -36,7 +36,7 @@ const sortedPost = post.sort(
                 <div class="relative ">
                   <img
                     transition:name={item.data.image.alt}
-                    class="rounded-xl object-cover "
+                    class="rounded-xl h-56 object-cover"
                     src={item.data.image.url}
                     alt={item.data.image.alt}
                   />

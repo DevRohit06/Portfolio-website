@@ -1,13 +1,7 @@
 ---
-import "@fontsource/inter/100.css";
-import "@fontsource/inter/200.css";
-import "@fontsource/inter/300.css";
-import "@fontsource/inter/400.css";
-import "@fontsource/inter/500.css";
-import "@fontsource/inter/600.css";
-import "@fontsource/inter/700.css";
-import "@fontsource/inter/800.css";
-import "@fontsource/inter/900.css";
+import "@fontsource-variable/space-grotesk";
+import "@fontsource-variable/manrope";
+
 import { SEO } from "astro-seo";
 const canonicalURL = new URL(Astro.url.pathname, Astro.url.origin).toString();
 const resolvedImageWithDomain = new URL(
@@ -22,6 +16,7 @@ interface Props {
 const { title } = Astro.props;
 import { ViewTransitions } from "astro:transitions";
 import preload from "astro-preload";
+import Glow from "../components/Glow";
 const makeTitle = title ? title : "Rohit Kushwaha";
 ---
 
@@ -79,6 +74,7 @@ const makeTitle = title ? title : "Rohit Kushwaha";
     <title>{title}</title>
   </head>
   <body>
+    <Glow client:only />
     <slot />
 
     <style is:global>
@@ -88,31 +84,10 @@ const makeTitle = title ? title : "Rohit Kushwaha";
         content-visibility: auto;
       }
       body {
-        font-family: "Inter", sans-serif;
-        background-color: rgb(20, 20, 20);
-        background:
-          linear-gradient(90deg, #171717 21px, transparent 1%) center,
-          linear-gradient(#151515 21px, transparent 1%) center,
-          #585858;
+        font-family: "Manrope Variable", sans-serif;
+        background: #0a0a0a;
         background-size: 22px 22px;
         overflow-x: hidden;
-      }
-
-      body .cursor {
-        position: fixed;
-        z-index: 100;
-        height: 15px;
-        width: 15px;
-        border-radius: 36px;
-        background-color: rgba(255, 255, 255, 0.75);
-        box-shadow:
-          0 0 24px 0 #0000001a,
-          0 1px 0 0 #0000;
-        pointer-events: none;
-        transition: all 200ms ease-out;
-        left: -18px;
-        top: -18px;
-        box-sizing: border-box;
       }
       ::-webkit-scrollbar {
         width: 10px;

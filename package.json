@@ -17,6 +17,8 @@
     "@astrojs/sitemap": "^3.0.3",
     "@astrojs/tailwind": "^5.0.3",
     "@astrojs/vercel": "^6.1.0",
+    "@fontsource-variable/manrope": "^5.0.18",
+    "@fontsource-variable/space-grotesk": "^5.0.16",
     "@fontsource/inter": "^5.0.16",
     "@heroicons/react": "^2.1.1",
     "@nanostores/react": "^0.7.1",
