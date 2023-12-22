@@ -1,6 +1,15 @@
 ---
 import "@fontsource-variable/space-grotesk";
 import "@fontsource-variable/manrope";
+import "@fontsource/poppins/100.css";
+import "@fontsource/poppins/200.css";
+import "@fontsource/poppins/300.css";
+import "@fontsource/poppins/400.css";
+import "@fontsource/poppins/500.css";
+import "@fontsource/poppins/600.css";
+import "@fontsource/poppins/700.css";
+import "@fontsource/poppins/800.css";
+import "@fontsource/poppins/900.css";
 
 import { SEO } from "astro-seo";
 const canonicalURL = new URL(Astro.url.pathname, Astro.url.origin).toString();
@@ -84,7 +93,8 @@ const makeTitle = title ? title : "Rohit Kushwaha";
         content-visibility: auto;
       }
       body {
-        font-family: "Manrope Variable", sans-serif;
+        cursor: url("/cursor.png"), auto;
+        font-family: "Poppins", sans-serif;
         background: #0a0a0a;
         background-size: 22px 22px;
         overflow-x: hidden;

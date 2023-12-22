@@ -20,6 +20,7 @@
     "@fontsource-variable/manrope": "^5.0.18",
     "@fontsource-variable/space-grotesk": "^5.0.16",
     "@fontsource/inter": "^5.0.16",
+    "@fontsource/poppins": "^5.0.8",
     "@heroicons/react": "^2.1.1",
     "@nanostores/react": "^0.7.1",
     "@tailwindcss/typography": "^0.5.10",
