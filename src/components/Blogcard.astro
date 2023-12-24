@@ -12,7 +12,7 @@ const sortedPost = post.sort(
 <section class="w-5/6 mx-auto">
   <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
     <div class="flex items-center justify-between py-8">
-      <h1 class="text-primary text-2xl sm:text-3xl font-semibold">
+      <h1 class="text-primary text-xl sm:text-3xl font-semibold">
         Latest Blog Posts
       </h1>
       <a
@@ -25,18 +25,22 @@ const sortedPost = post.sort(
     </div>
     <div class="flex mb-24 mx-auto justify-center">
       <div
-        class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8 mx-auto justify-center items-center"
+        class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8 mx-auto justify-center"
       >
         {
           sortedPost.slice(0, 3).map(async (item) => {
             const { remarkPluginFrontmatter } = await item.render();
             let time = getFormattedDate(item.data.publishDate);
             return (
-              <div class="flex flex-col gap-4">
+              <div
+                data-aos="fade-up"
+                data-aos-anchor-placement="center-bottom"
+                class="flex flex-col gap-4 w-full"
+              >
                 <div class="relative ">
                   <img
                     transition:name={item.data.image.alt}
-                    class="rounded-xl h-56 object-cover"
+                    class="rounded-xl h-56 object-cover w-full"
                     src={item.data.image.url}
                     alt={item.data.image.alt}
                   />

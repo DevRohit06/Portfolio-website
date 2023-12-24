@@ -2,13 +2,14 @@
 import HeroContent from "./HeroContent.astro";
 ---
 
-<div class="relative -z-10">
+<div class="relative ">
   <div
-    class="h-[100vh] items-center justify-center flex overflow-hidden -mt-16 sm:-mt-24 px-8"
+    class="h-[100vh] items-center justify-center flex overflow-hidden px-8"
   >
-    <div class="transition-all isolate">
+    <div class="transition-all isolate -mt-16 sm:-mt-28">
       <div
-        class="absolute inset-x-0 -z-50 overflow-hidden blur-3xl"
+      
+        class="absolute inset-x-0 -z-50 overflow-hidden blur-3xl "
         aria-hidden="true"
       >
         <div
@@ -22,7 +23,7 @@ import HeroContent from "./HeroContent.astro";
       </div>
       <HeroContent />
       <div
-        class="absolute inset-x-0 top-[calc(100%-13rem)] -z-50 overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+        class="absolute inset-x-0 top-[calc(100%-13rem)] -z-50 overflow-hidden blur-3xl sm:top-[calc(100%-30rem)] "
         aria-hidden="true"
       >
         <div
