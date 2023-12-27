@@ -79,9 +79,16 @@ cd Portfolio-website
 
 ```
 
-  
 
-3. Install the dependencies:
+3. Change the Google Analytics Key Code to your own Key
+
+Change the Key inside 
+```
+Portfolio-website/src/layouts/Layout.astro & BlogLayout.astro
+```
+
+
+4. Install the dependencies:
 
   
 
@@ -93,7 +100,7 @@ npm install
 
   
 
-4. Start the development server:
+5. Start the development server:
 
   
 
@@ -105,7 +112,7 @@ npm run dev
 
   
 
-5. Open your browser and visit [http://localhost:3000](http://localhost:3000) to see the website locally.
+6. Open your browser and visit [http://localhost:3000](http://localhost:3000) to see the website locally.
 
   
 
